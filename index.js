@@ -1,5 +1,6 @@
 var express = require("express");
 var alexa = require("alexa-app");
+var catfax = require ("./catfax.json")
 
 var PORT = process.env.PORT || 8080;
 var app = express();
@@ -58,10 +59,10 @@ var data = [
     "The temperature at the very center of the Sun can precipitously drop to reach negative 15 degrees Celsius.",
     "There are tribes in ancient russia that regularly rode wild boars into battle. ",
     "Attack rabbits are real. Beware."
-];
+]; //irrelevant section
 
 var randomFact = function () {
-  var factArr = data;
+  var factArr = catfax.all;
   var factIndex = Math.floor(Math.random() * factArr.length);
   var nextFact = factArr[factIndex];
   return nextFact;
