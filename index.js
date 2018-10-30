@@ -65,7 +65,7 @@ var randomFact = function () {
   var factArr = catfax.all;
   var factIndex = Math.floor(Math.random() * factArr.length);
   var nextFact = factArr[factIndex];
-  return nextFact;
+  return nextFact.text;
   };
 
 
